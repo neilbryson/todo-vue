@@ -2,7 +2,10 @@
 import { useTodoStore } from '@/stores/todo';
 
 const props = defineProps({
-  id: Number,
+  id: {
+    type: Number,
+    required: true,
+  },
   details: String,
   isDone: Boolean,
 })
