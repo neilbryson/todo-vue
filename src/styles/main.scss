@@ -1,0 +1,40 @@
+@import './base.scss';
+
+#app {
+    max-width: 1280px;
+    font-weight: normal;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-border);
+  color: var(--color-text);
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--color-border-hover);
+}
+
+button:disabled {
+  background-color: var(--color-background-mute);
+  color: var(--color-background-soft)
+}
+
+#modal-base {
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}

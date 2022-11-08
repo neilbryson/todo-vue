@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
+import AddTodoModal from '@/components/AddTodoModal.vue';
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import { RouterLink } from 'vue-router';
     <nav>
       <RouterLink to="/">Home</RouterLink>
     </nav>
+    <AddTodoModal />
   </header>
 </template>
 
