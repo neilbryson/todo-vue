@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 import type { Todo } from '@/types/Todo';
 
 export const useTodoStore = defineStore('todo', () => {
-  const todoList = ref<Todo[]>([{ id: 0, isDone: false, details: 'hello', dateAdded: Date.now() }]);
+  const todoList = ref<Todo[]>([]);
   const lastId = ref(0);
 
   function add(details: string): void {
@@ -13,6 +13,7 @@ export const useTodoStore = defineStore('todo', () => {
     todoList.value.push({
       id,
       dateAdded: currentDate,
+      dateDone: null,
       details,
       isDone: false,
     });
@@ -25,6 +26,7 @@ export const useTodoStore = defineStore('todo', () => {
 
     const nextDone = !item.isDone;
     item.isDone = nextDone;
+    item.dateDone = nextDone ? Date.now() : null;
 
     return nextDone;
   }
