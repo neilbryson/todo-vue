@@ -1,23 +1,18 @@
-<script lang="ts">
-import { mapActions } from 'pinia';
+<script setup lang="ts">
 import { useTodoStore } from '@/stores/todo';
 
-export default {
-  props: {
-    id: Number,
-    details: String,
-    isDone: Boolean,
-  },
-  methods: {
-    ...mapActions(useTodoStore, ['toggleDone'])
-  }
-}
+const props = defineProps({
+  id: Number,
+  details: String,
+  isDone: Boolean,
+})
+const { toggleDone } = useTodoStore();
 </script>
 
 <template>
-  <div class="todo-item-container" :class="{ checked: isDone }">
-    <input type="checkbox" :checked="isDone" @change="toggleDone(id)" />
-    <span>{{ details }}</span>
+  <div class="todo-item-container" :class="{ checked: props.isDone }">
+    <input type="checkbox" :checked="props.isDone" @change="toggleDone(props.id)" />
+    <span class="todo-item-details">{{ props.details }}</span>
   </div>
 </template>
 
@@ -30,6 +25,13 @@ export default {
 
     &.checked {
       opacity: 0.4;
+      text-decoration: line-through;
+    }
+
+    .todo-item-details {
+      margin-left: 1rem;
+      font-size: 1.25rem;
     }
   }
+
 </style>
