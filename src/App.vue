@@ -5,8 +5,24 @@ import Header from '@/components/TopHeader.vue';
 </script>
 
 <template>
-  <Header />
-  <RouterView />
+  <main>
+    <div>
+      <Header />
+      <RouterView />
+    </div>
+  </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+  main {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  div {
+    max-width: 1440px;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+</style>
