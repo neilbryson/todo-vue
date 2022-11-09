@@ -17,6 +17,7 @@ function handleContentChange(e: Event): void {
 function handleAdd(): void {
   add(todoContent.value);
   isOpen.value = false;
+  todoContent.value = '';
 }
 
 function handleClose(): void {

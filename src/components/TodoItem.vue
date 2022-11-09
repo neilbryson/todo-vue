@@ -47,5 +47,4 @@ const { toggleDone } = useTodoStore();
       flex-direction: column;
     }
   }
-
 </style>
