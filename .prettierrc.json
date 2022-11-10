@@ -1,6 +1,6 @@
 {
   "endOfLine": "lf",
-  "parser": "typescript",
+  "parser": "vue",
   "semi": true,
   "singleQuote": true,
   "trailingComma": "es5",

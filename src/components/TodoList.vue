@@ -26,9 +26,9 @@ const doneList = computed(() => todoList.value.filter((todo) => todo.isDone));
 </template>
 
 <style lang="scss" scoped>
-  .todo-list-container {
-    > h2 {
-      margin: 0.85rem 0;
-    }
+.todo-list-container {
+  > h2 {
+    margin: 0.85rem 0;
   }
+}
 </style>

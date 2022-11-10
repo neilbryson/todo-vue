@@ -40,12 +40,12 @@ function handleClose(): void {
 </template>
 
 <style lang="scss" scoped>
-  button {
-    margin-left: auto;
-  }
+button {
+  margin-left: auto;
+}
 
-  textarea {
-    resize: none;
-    font-family: inherit;
-  }
+textarea {
+  resize: none;
+  font-family: inherit;
+}
 </style>

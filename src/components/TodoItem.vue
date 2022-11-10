@@ -20,31 +20,31 @@ const { toggleDone } = useTodoStore();
 </template>
 
 <style lang="scss" scoped>
-  .todo-item-container {
-    display: flex;
-    border: 1px solid #d3d3d3;
-    border-radius: 0.25rem;
-    padding: 0.875rem;
+.todo-item-container {
+  display: flex;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.25rem;
+  padding: 0.875rem;
 
-    &.checked {
-      opacity: 0.4;
+  &.checked {
+    opacity: 0.4;
 
-      .todo-item-details > span:first-of-type {
-        text-decoration: line-through;
-      }
-    }
-
-    .todo-item-details {
-      margin-left: 1rem;
-
-      > span:first-of-type {
-        font-size: 1.25rem;
-      }
-    }
-
-    > div {
-      display: flex;
-      flex-direction: column;
+    .todo-item-details > span:first-of-type {
+      text-decoration: line-through;
     }
   }
+
+  .todo-item-details {
+    margin-left: 1rem;
+
+    > span:first-of-type {
+      font-size: 1.25rem;
+    }
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>
